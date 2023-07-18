@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;  
+}
+body{
+    background-color: rgb(72, 30, 32);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    
+}
+h1{
+    color: #e3e3e3;
+    font-size:15vh;
+    
+animation: blink 3s ease-in-out infinite;
+}
+
+.game-board{
+  width: 100%;  
+  height:500px;
+  border-bottom: 15px solid #29961b;
+  margin:0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgb(87, 201, 216), #c0e1e9) ;
+}
+
+.pipe{
+   position: absolute; 
+   bottom: 0;
+   width:75px;
+   animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+width: 150px;
+position: absolute;
+bottom: 0;
+}
+
+
+.buttons-container{
+display: flex;
+justify-content:start;
+
+}
+.restart-button{
+  background: #159bbd;
+  padding: 1%;
+  border-radius: 12%;
+ 
+}
+.restart-button:hover{
+  background-color: rgb(72, 30, 32);
+  color: beige;
+ 
+}
+.play-button{
+  background: #159bbd;
+  border-radius: 12%;
+  padding: 1%;
+}
+
+.play-button:hover{
+  background-color: rgb(72, 30, 32);
+  color: beige;
+ 
+
+}
+
+.jump{       
+animation:jump 500ms ease-out;
+
+}
+
+.clouds{
+    position:absolute;
+   width: 450px; 
+   animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation{
+from {
+    right: 0;
+}
+
+to {
+    right: 100%;
+}
+}
+
+@keyframes jump{
+ 0%{
+   bottom: -550px; 
+ }  
+ 40%{
+
+    bottom: 250px;
+    
+ } 
+ 50%{
+    bottom: 200px;
+ }
+ 100%{
+    bottom: 0;
+ }
+}
+
+@keyframes pipe-animation{
+
+from{
+  right:-80px;  
+}
+
+to{
+  right: 100%;  
+}
+
+}
+
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
